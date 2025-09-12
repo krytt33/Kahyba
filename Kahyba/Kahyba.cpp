@@ -2,13 +2,38 @@
 //
 
 #include <iostream>
-using namespace std;
-int main()
-{
-    int n = 17, l, k = 5;
-    l = ++n;
-    k = n++;
+#include <cmath>
 
+using namespace std;
+
+/*09-531(2) Степанов Даниил Денисович 
+(задача на нахождение кратчайшего расстояния между точками, 
+лежащими на периметре квадрата)
+Задание с прошлого урока*/ 
+int pos(int x, int y, int s) {
+    if (y == 0) {
+        return x;
+    }
+    if (x == s) {
+        return s + y;
+    }
+    if (y == s) {
+        return (3 * s) - x;
+    }
+    return (4 * s) - y;
+}
+int main() {
+    /*int s, x1, y1, x2, y2;
+    cout << "Сторона квадрата: "; cin >> s;
+    cout << "Точка А: "; cin >> x1 >> y1;
+    cout << "Точка B: "; cin >> x2 >> y2;
+    int pos1, pos2, mini;
+    pos1 = pos(x1, y1, s);
+    pos2 = pos(x2, y2, s);
+    mini = min(abs(pos1 - pos2), (4 * s) - abs(pos1 - pos2));
+    //cout << abs(pos1 - pos2) <<"    " << 4 * s - abs(pos1 - pos2) << "  *  " << pos1 << "    " << pos2<< endl;
+    cout << "минимальное расстояни между точками: " << mini;
+    return 0;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
