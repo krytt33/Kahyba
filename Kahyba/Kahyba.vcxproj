@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="Kahyba.cpp" />
     <ClCompile Include="lesonN2.cpp" />
+    <ClCompile Include="WhileFor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
